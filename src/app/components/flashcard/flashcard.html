@@ -1,0 +1,19 @@
+<mat-card appearance="raised" class="card-container">
+  <mat-card-header>
+    <mat-card-title>{{ currentEntry?.key }}</mat-card-title>
+    <mat-card-subtitle>{{ currentEntry?.transliteration }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+     <div>{{ currentEntry?.definition }}</div>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <button matIconButton aria-label="Previous flashcard" (click)="moveToPreviousEntry()">
+      <mat-icon>arrow_back</mat-icon>
+     </button>
+    <button matIconButton aria-label="Next flashcard" (click)="moveToNextEntry()">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
